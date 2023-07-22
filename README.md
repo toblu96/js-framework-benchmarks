@@ -20,14 +20,14 @@ Simple API...
 
 ## Results
 
-All test are executed on an MacBook Pro M2 2023 (10 Cores with 32GB). Test containers are running on the same machine as the tests are executed.
+All test are executed on an MacBook Pro M2 2023 (10 Cores with 32GB). Test are executed against dev servers running on the same machine as the tests are executed.
 
 Test are executed with the following settings:
 
 - scenarios: (100.00%) 1 scenario, 10 max VUs, 40s max duration (incl. graceful stop):
 - default: 10 looping VUs for 10s (gracefulStop: 30s)
 
-### Bun
+### Elysia
 
 iteration_duration: avg=149.54µs min=29.54µs med=119.66µs max=27.69ms p(90)=219.41µs p(95)=281.33µ
 
@@ -43,4 +43,26 @@ http_reqs: `486'581` (48'655.312051/s)
 
 iteration_duration: avg=553.29µs min=98.54µs med=479.83µs max=14.23ms p(90)=911.58µs p(95)=996.29µs
 
-http_reqs: `180'341` (18033.338993/s)
+http_reqs: `180'341` (18'033.338993/s)
+
+## Running tests against containerized applications
+
+All test are executed on an MacBook Pro M2 2023 (10 Cores with 32GB). Test containers are running on the same machine as the tests are executed.
+
+### Elysia
+
+http_reqs: `157'850` (15'783.866718/s)
+
+![Elysia Docker benchmark](./docs/img/elysia_docker_benchmark.png)
+
+### Nuxt
+
+http_reqs: `143'972` (14'396.471539/s)
+
+![Nuxt Docker benchmark](./docs/img/nuxt_docker_benchmark.png)
+
+### Express
+
+http_reqs: `96'331` (9'632.418988/s)
+
+![Express Docker benchmark](./docs/img/express_docker_benchmark.png)
